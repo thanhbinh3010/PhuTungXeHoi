@@ -1,0 +1,159 @@
+<!-- SECTION -->
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <!-- shop -->
+            <div class="col-md-4 col-xs-6">
+                <div class="shop">
+                    <div class="shop-img">
+                        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2022-lamborghini-aventador-109-1625607587.jpg?crop=0.691xw:0.776xh;0.204xw,0.180xh&resize=640:*" alt="">
+                    </div>
+                    <div class="shop-body">
+
+                        <a routerLink="product/category/dau" class="cta-btn">Đi tới cửa hàng <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- /shop -->
+
+            <!-- shop -->
+            <div class="col-md-4 col-xs-6">
+                <div class="shop">
+                    <div class="shop-img">
+                        <img src="https://img.etimg.com/photo/msid-69609266,quality-100/aventador.jpg" alt="">
+                    </div>
+                    <div class="shop-body">
+
+                        <a routerLink="product/category/phutung" class="cta-btn">Đi tới cửa hàng <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- /shop -->
+
+            <!-- shop -->
+            <div class="col-md-4 col-xs-6">
+                <div class="shop">
+                    <div class="shop-img">
+                        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2022-lamborghini-aventador-109-1625607587.jpg?crop=0.691xw:0.776xh;0.204xw,0.180xh&resize=640:*" alt="">
+                    </div>
+                    <div class="shop-body">
+
+                        <a routerLink="product/category/dau" class="cta-btn">Đi tới cửa hàng <i class="fa fa-arrow-circle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- /shop -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /SECTION -->
+
+<!-- SECTION -->
+<div class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+
+            <!-- section title -->
+            <div class="col-md-12">
+                <div class="section-title">
+                    <h3 class="title">Sản phẩm mới</h3>
+
+                </div>
+            </div>
+            <!-- /section title -->
+
+            <!-- Products tab & slick -->
+            <div class="col-md-12">
+                <div class="row">
+<!--                  /assets/img/product06.png-->
+
+                  <!-- product -->
+                  <div class="col-md-4 col-sm-6" *ngFor="let p of prodData">
+                    <div class="card my-2">
+                      <img [src]="p.image" alt=""  height="350px" class="card-img-top" (click)="getProdDetails(p.id)"   style="cursor:pointer;">
+                      <div class="card-header" style="background-color: #FFFFFF; font-weight: bold">
+                        <div class="card-title">
+                          <p>{{p.name.substring(0,25)}}...</p>
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <p>{{p.description.substring(0,30)}}...</p>
+                        <p class="lead" style="text-align: center">{{p.price | currency:"VND"}}</p>
+                      </div>
+
+                      <div class="row d-flex justify-content-center border-primary my-3">
+                        <div class="col-md-6">
+                          <button class="btn btn-outline-primary btn-sm btn-block"
+                                  [class.disabled]="p.quantity < 1"
+                                  [class.btn-outline-danger]="p.quantity < 1"
+                                  (click)="addToCart(p)"
+                          >{{p.quantity < 1 ? "No Stock":"Thêm vào giỏ hàng"}}</button>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- /product -->
+                  <!-- product -->
+
+
+
+                  <!-- /product -->
+
+
+
+
+                        <!-- /tab -->
+                    </div>
+                </div>
+=            <!-- Products tab & slick -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /SECTION -->
+
+
+
+<!-- NEWSLETTER -->
+<div id="newsletter" class="section">
+    <!-- container -->
+    <div class="container">
+        <!-- row -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="newsletter">
+                    <p>Đăng kí để nhận <strong>THƯ MỚI</strong></p>
+                    <form>
+                        <input class="input" type="email" placeholder="Nhập email của bạn">
+                        <button class="newsletter-btn"><i class="fa fa-envelope"></i> Đăng kí</button>
+                    </form>
+                    <ul class="newsletter-follow">
+                        <li>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /NEWSLETTER -->
